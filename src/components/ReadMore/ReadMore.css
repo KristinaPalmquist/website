@@ -1,0 +1,112 @@
+@import "../../assets/variables.css";
+
+.read-more-btn {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    transition: transform 0.5s ease;
+    opacity: 100%;
+}
+.read-more-btn:hover {
+    width: 224px;
+    border: none;
+}
+
+.outer-circle {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    position: absolute;
+    opacity: 50%;
+    z-index: 1;
+}
+.read-more-btn:hover .outer-circle {
+    transition: transform 0.75s ease;
+    transform: scale(0.7);
+}
+
+.text-field {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    background-color: var(--background-secondary);
+    position: absolute;
+    align-self: center;
+    top: 10px;
+    left: 10px;
+    border: none;
+    outline: none;
+    z-index: 2;
+}
+.text-field:focus  {
+    border: none;
+    outline: none;
+}
+.read-more-btn:hover .text-field {
+    border-radius: 30px;
+    width: 170px;
+    height: 56px;
+}
+
+.read-more {
+    font-size: 16px;
+    font-weight: bolder;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    align-self: center;
+    visibility: hidden;
+    z-index: 3;
+}
+.read-more-btn:hover .read-more {
+    visibility: visible;
+}
+
+.inner-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    align-self: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    z-index: 4;
+    transition: transform 0.5s ease
+}
+.read-more-btn:hover .inner-circle {
+    transition: transform 0.5s ease;
+    transform: translate(114px, 0%);
+}
+
+.plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-0%, 50%);
+}
+
+.horizontal {
+    width: 21px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: var(--background-secondary);
+    position: absolute;
+}
+.vertical {
+    width: 2px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: var(--background-secondary);
+    position: absolute;
+}

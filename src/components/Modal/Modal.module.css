@@ -1,0 +1,23 @@
+@import "../../assets/variables.css";
+
+
+.modal {
+    height: 500px;
+    width: 500px;
+    border-radius: var(--border-radius);
+}
+
+.modal::backdrop {
+    background: hsl(0 0% 0% / 50%);
+}
+
+.content {
+
+}
+
+.closeButton {
+    font-size: .75em;
+    position: absolute;
+    top: .25em;
+    right: .25em;
+}

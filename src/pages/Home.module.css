@@ -1,0 +1,6 @@
+@import "../assets/variables.css";
+
+.iths {
+  text-decoration: none;
+  color: var(--accent);
+}

@@ -1,0 +1,28 @@
+@import "../assets/variables.css";
+
+.coursesList {
+  width: 40vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  color: var(--text-secondary);
+}
+
+.coursesListItem {
+  list-style-type: none;
+  text-align: left;
+  padding: 2vh;
+}
+
+.coursesLink {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.coursesLink:hover {
+  color: var(--accent-primary);
+}
