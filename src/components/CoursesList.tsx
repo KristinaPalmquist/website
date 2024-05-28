@@ -1,5 +1,5 @@
 import styles from "./CoursesList.module.css";
-import ReadMore from "../ReadMore/ReadMore";
+import ReadMore from "../ReadMore/ReadMore.tsx";
 
 const CoursesList = () => {
   const coursesItems = [
