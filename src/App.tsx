@@ -5,7 +5,7 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import useLocalStorage from "use-local-storage";
 
-import "./App.css";
+// import "./App.css";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
@@ -57,7 +57,7 @@ function App() {
                         <Route path="/work" element={<Courses/>}/>
                         <Route path="/courses" element={<Courses/>}/>
                         <Route path="/contact" element={<Contact/>}/>
-                        <Route path="/404" element={<ErrorComponent/>}/>
+                        <Route path="*" element={<ErrorComponent/>}/>
                     </Routes>
             </BrowserRouter>
             </div>
