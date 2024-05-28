@@ -13,6 +13,7 @@ import Courses from "./pages/Courses";
 import { Menu } from "./components/Menu";
 import { Title } from "./components/Title";
 import CircleCursor from "./components/CircleCursor/CircleCursor.tsx";
+import ErrorComponent from "./pages/404/404.tsx";
 
 function App() {
     const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -56,6 +57,7 @@ function App() {
                         <Route path="/work" element={<Courses/>}/>
                         <Route path="/courses" element={<Courses/>}/>
                         <Route path="/contact" element={<Contact/>}/>
+                        <Route path="/404" element={<ErrorComponent/>}/>
                     </Routes>
             </BrowserRouter>
             </div>
