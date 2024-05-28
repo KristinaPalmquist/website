@@ -1,10 +1,10 @@
 import styles from "./Home.module.css";
-import ReadMore from "../components/ReadMore/ReadMore.tsx";
+// import ReadMore from "../components/ReadMore/ReadMore.tsx";
 
 const Home = () => {
-    const handleClick = () => {
-        console.log("clicked");
-    };
+    // const handleClick = () => {
+    //     console.log("clicked");
+    // };
 
   return (
     <div className="homeContainer">
@@ -18,7 +18,7 @@ const Home = () => {
         </a>{" "}
         in Stockholm and this is my website created in React.
       </p>
-        <ReadMore onClick={() => handleClick()}></ReadMore>
+        {/*<ReadMore onClick={() => handleClick()}></ReadMore>*/}
     </div>
   );
 };
