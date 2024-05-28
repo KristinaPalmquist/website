@@ -1,5 +1,5 @@
 import styles from "./CoursesList.module.css";
-import ReadMore from "src/components/ReadMore/ReadMore.tsx";
+// import ReadMore from "../ReadMore/ReadMore.tsx";
 
 const CoursesList = () => {
   const coursesItems = [
@@ -37,7 +37,7 @@ const CoursesList = () => {
       {coursesItems.map((item, index) => {
         return (
           <li key={index} className={styles.coursesListItem}>
-          <ReadMore></ReadMore>
+          {/*<ReadMore></ReadMore>*/}
             <a href={item.link} className={styles.coursesLink}>
               {item.name}
             </a>
