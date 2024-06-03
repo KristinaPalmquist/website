@@ -1,12 +1,13 @@
 import styles from "./Modal.module.css";
 import React, { useEffect, useRef, useState } from "react";
-import { Course } from "../../pages/Courses.tsx";
+import { Course } from "../../pages/Courses/Courses.tsx";
 
 
 interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
     children: Course;
+    className?: string;
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }: ModalProps) => {

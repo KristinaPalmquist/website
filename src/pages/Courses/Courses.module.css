@@ -1,4 +1,4 @@
-@import "../assets/variables.css";
+@import "../../assets/variables.css";
 
 .previewContainer {
     display: flex;
@@ -23,6 +23,7 @@
   height: 100%;
   border: none;
 }
+
 
 
 
@@ -97,3 +98,13 @@
 /*  color: var(--text-secondary);*/
 /*  font-weight: bold;*/
 /*}*/
+
+
+.modalVisible {
+  display: block;
+  /*   visibility: visible;*/
+}
+.modalHidden {
+ display: none;
+/*  visibility: hidden;*/
+}

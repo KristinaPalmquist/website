@@ -6,10 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import useLocalStorage from "use-local-storage";
 
 // import "./App.css";
-import Home from "./pages/Home";
-import Contact from "./pages/Contact";
-import About from "./pages/About";
-import Courses from "./pages/Courses";
+import Home from "./pages/Home/Home.tsx";
+import Contact from "./pages/Contact/Contact.tsx";
+import About from "./pages/About/About.tsx";
+import Courses from "./pages/Courses/Courses.tsx";
 import { Menu } from "./components/Menu";
 import { Title } from "./components/Title";
 import CircleCursor from "./components/CircleCursor/CircleCursor.tsx";

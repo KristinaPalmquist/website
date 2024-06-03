@@ -1,9 +1,9 @@
 // import { Link } from "react-router-dom";
 
 import styles from "./Courses.module.css";
-import { useState } from "react";
-import ReadMore from "../components/ReadMore/ReadMore.tsx";
-import Modal from "../components/Modal/Modal.tsx";
+import {  useState } from "react";
+import ReadMore from "../../components/ReadMore/ReadMore.tsx";
+import Modal from "../../components/Modal/Modal.tsx";
 // import { JavaScript } from "../components/courseComponents/JavaScript";
 // import { TestingTypeScript } from './../components/courseComponents/TestingTypeScript';
 // import { Agile } from './../components/courseComponents/Agile';
@@ -95,25 +95,18 @@ const Courses = () => {
     },
   ];
 
-  // const [selectedSource, setSelectedSource] = useState(coursesItems[0].source);
-const [isOpen, setOpen] = useState(false);
-  // const showCourse = (index) => {
-  //   setSelectedSource(coursesItems[index].source);
-  //   console.log(index);
-  // };
 
-  // const dialog = document.getElementById('dialog');
-  //
-  // const openDialog = (index: number) => {
-  //   console.log("click");
-  //   setSelectedSource(coursesItems[index].source);
-  //   setOpen(true);
-  //   dialog.showModal();
-  // };
-  //
-  // const closeDialog = () => {
-  //   dialog.close();
-  // };
+const [isOpen, setOpen] = useState(false);
+const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+
+   const openDialog = (item: Course) => {
+     setSelectedCourse(item);
+     setOpen(true);
+   };
+
+ const closeDialog = () => {
+   setOpen(false);
+};
 
 
 
@@ -128,6 +121,9 @@ const [isOpen, setOpen] = useState(false);
             ></iframe>
           </div>
         </div>
+
+        <div>{isOpen ? 'open' : 'not open'}</div>
+        <div>{selectedCourse?.name || null}</div>
 
         <div className={styles.coursesContainer}>
           <ul className={styles.coursesList}>
@@ -153,19 +149,25 @@ const [isOpen, setOpen] = useState(false);
                     {/*    </a>*/}
                     {/*  </button>*/}
                     {/*) : null}*/}
-                   <div className={styles.courseName}> {item.name} </div>
+                    <div className={styles.courseName}> {item.name} </div>
                     <div className={styles.courseReadMore} style={{width: '230px'}}>
-                      <ReadMore onClick={() => setOpen(true)}></ReadMore>
+                      <ReadMore onClick={() => openDialog(item)}></ReadMore>
                     </div>
-                    {/*<dialog id="dialog">*/}
-                      <Modal  isOpen={isOpen} onClose={() => setOpen(false)} children={item} ></Modal>
-                    {/*</dialog>*/}
+                    {/*<button onClick={() => openDialog(item)}>Open Dialog</button>*/}
+
+                    {/**/}
                   </li>
               );
             })}
           </ul>
         </div>
+        <Modal isOpen={isOpen} onClose={() => closeDialog()} children={selectedCourse}
+               className={isOpen ? styles.modalVisible : styles.modalHidden}></Modal>
 
+        {/*<dialog id="dialog">*/}
+        {/*  <button onClick={() => closeDialog()}>Close</button>*/}
+        {/*  {selectedCourse.name}*/}
+        {/*</dialog>*/}
       </div>
   );
 };
