@@ -1,7 +1,7 @@
 import styles from "./Modal.module.css";
-import {useEffect, useRef, useState} from "react";
+import {KeyboardEvent, useEffect, useRef, useState} from "react";
 import {Course} from "../../pages/Courses/Courses.tsx";
-
+import closeIcon from '../../assets/images/closeIcon.svg'
 
 interface ModalProps {
   isOpen: boolean;
@@ -26,13 +26,14 @@ const Modal: React.FC<ModalProps> = ({isOpen, onClose, children}: ModalProps) =>
     }
   }, [isOpen, isModalOpen]);
 
+
   const handleCloseModal = () => {
     if (onClose) {
       onClose();
     }
     setModalOpen(false);
   }
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLDialogElement>) => {
+  const handleKeyDown = (event: KeyboardEvent<HTMLDialogElement>) => {
     if (event.key === "Escape") {
       handleCloseModal();
     }
@@ -40,8 +41,17 @@ const Modal: React.FC<ModalProps> = ({isOpen, onClose, children}: ModalProps) =>
   if (!isModalOpen) return null;
   return (
     <dialog className={styles.modal} ref={modalRef} onKeyDown={handleKeyDown}>
-      <button className={styles.closeButton} onClick={handleCloseModal}>X</button>
-      <div className={styles.content}>{course.name}</div>
+      <button className={styles.closeButton} onClick={handleCloseModal}>
+        <img src={closeIcon} alt="close" className={styles.closeIcon}></img>
+      </button>
+      <div className={styles.content}>
+        <h2>{course.name}</h2>
+        <h4>Course content</h4>
+        <p>{course.courseContent}</p>
+        <h4>Course Assignment</h4>
+        <p>{course.courseAssignments}</p>
+      </div>
+
     </dialog>
   );
 }

@@ -2,13 +2,21 @@
 
 
 .modal {
-    height: 500px;
-    width: 500px;
-    border-radius: var(--border-radius);
+  /*height: clamp(600px, 70%, 900px);*/
+  height: clamp(50%, 600px, 100%);
+  /*min-height: 50%;*/
+  /*height: 700px;*/
+  /*max-height: 100%;*/
+
+  width: clamp(50%, 800px, 100%);
+  /*width: clamp(400px, 70%, 700px);*/
+  /*width: 500px;*/
+  border-radius: var(--border-radius);
+  border-style: none;
 }
 
 .modal::backdrop {
-    background: hsl(0 0% 0% / 50%);
+  background: hsl(0 0% 0% / 50%);
 }
 
 .content {
@@ -16,8 +24,15 @@
 }
 
 .closeButton {
-    font-size: .75em;
-    position: absolute;
-    top: .25em;
-    right: .25em;
+  font-size: 1em;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  border-style: none;
+  background-color: rgba(255, 99, 71, 0.0);
+}
+
+.closeIcon {
+  height: 1em;
+  width: 1em;
 }

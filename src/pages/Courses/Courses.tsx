@@ -1,7 +1,7 @@
 // import { Link } from "react-router-dom";
 
 import styles from "./Courses.module.css";
-import {  useState } from "react";
+import {useState} from "react";
 import ReadMore from "../../components/ReadMore/ReadMore.tsx";
 import Modal from "../../components/Modal/Modal.tsx";
 // import { JavaScript } from "../components/courseComponents/JavaScript";
@@ -10,14 +10,15 @@ import Modal from "../../components/Modal/Modal.tsx";
 
 
 export interface Course {
-    name: string; // course name
+  name: string; // course name
   school: string;
   courseCode?: string;
-    link?: string;
-    source: string;
-    courseContent: string;
-    courseAssignments?: string[];
+  link?: string;
+  source: string;
+  courseContent: string;
+  courseAssignments?: string[];
 }
+
 const Courses = () => {
   const coursesItems: Course[] = [
     {
@@ -25,7 +26,7 @@ const Courses = () => {
       school: "IT-Högskolan",
       link: "https://glittering-douhua-2a73da.netlify.app/",
       source: "https://glittering-douhua-2a73da.netlify.app/",
-      courseContent:`
+      courseContent: `
           Create static websites using HTML5 and CSS3, publish them, and develop modern, responsive web solutions that 
           adhere to web standards and WCAG accessibility requirements (level AA) while being SEO optimized. The course 
           aims to teach effective website structuring, styling, and publishing.
@@ -33,7 +34,7 @@ const Courses = () => {
           basic digital accessibility. They will be able to create, publish, and optimize websites independently, ensuring 
           they meet client requirements and accessibility standards.`,
       courseAssignments: [
-          `Build a website for an imaginary or real organization/customer. The website should be responsive and work for 
+        `Build a website for an imaginary or real organization/customer. The website should be responsive and work for 
           all widths between 360px (mobile) and 980px (desktop). The project must fulfill demands for AA accessibility 
           grade. The page must include navbar, content, and footer. The project is to be published on the web through FTP 
           or similar.
@@ -92,7 +93,7 @@ You should include at least one responsive image that fits within the existing s
         web requests. They will be equipped to independently develop browser applications and enhance dynamic websites 
         with JavaScript, HTML, and CSS.`,
       courseAssignments: [
-          `Combine JavaScript wih HTML and CSS to build a dynamic website. Data from at least one web service/API must 
+        `Combine JavaScript wih HTML and CSS to build a dynamic website. Data from at least one web service/API must 
           be consumed through JavaScript and displayed. It is not allowed to use APIs that are used as examples in the 
           course material. Create a layout to present the information fetched from the web service. Optional to use a 
           CSS framework. The website must include at least two web sites in separate HTML files. Links are to be created 
@@ -183,79 +184,77 @@ You should include at least one responsive image that fits within the existing s
   ];
 
 
-const [isOpen, setOpen] = useState(false);
-const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+  const [isOpen, setOpen] = useState(false);
+  const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
 
-   const openDialog = (item: Course) => {
-     setSelectedCourse(item);
-     setOpen(true);
-   };
+  const openDialog = (item: Course) => {
+    setSelectedCourse(item);
+    setOpen(true);
+  };
 
- const closeDialog = () => {
-   setOpen(false);
-};
-
-
+  const closeDialog = () => {
+    setOpen(false);
+  };
 
   return (
-      <div>
-        <div className={styles.previewContainer}>
-          <div className={styles.preview}>
-            <iframe
-                title="previewIFrame"
-                className={styles.previewIFrame}
-                src={coursesItems[0].source}
-            ></iframe>
-          </div>
-        </div>
+    <div>
+      {/*<div className={styles.previewContainer}>*/}
+      {/*  <div className={styles.preview}>*/}
+      {/*    <iframe*/}
+      {/*        title="previewIFrame"*/}
+      {/*        className={styles.previewIFrame}*/}
+      {/*        src={coursesItems[0].source}*/}
+      {/*    ></iframe>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
 
-        <div>{isOpen ? 'open' : 'not open'}</div>
-        <div>{selectedCourse?.name || null}</div>
+      {/*<div>{isOpen ? 'open' : 'not open'}</div>*/}
+      {/*<div>{selectedCourse?.name || null}</div>*/}
 
-        <div className={styles.coursesContainer}>
-          <ul className={styles.coursesList}>
-            {coursesItems.map((item, index) => {
-              return (
-                  <li key={index} className={styles.coursesListItem}>
-                    {/*<Link*/}
-                    {/*  to={item.link}*/}
-                    {/*  className={styles.coursesLink}*/}
-                    {/*  onClick={() => showCourse(index)}*/}
-                    {/*>*/}
-                    {/*  {item.name}*/}
-                    {/*</Link>*/}
-                    {/*{item.link ? (*/}
-                    {/*  <button className={styles.courseButton}>*/}
-                    {/*    <a*/}
-                    {/*      href={item.link}*/}
-                    {/*      target="_blank"*/}
-                    {/*      rel="noreferrer"*/}
-                    {/*      className={styles.courseButtonLink}*/}
-                    {/*    >*/}
-                    {/*      Check it out*/}
-                    {/*    </a>*/}
-                    {/*  </button>*/}
-                    {/*) : null}*/}
-                    <div className={styles.courseName}> {item.name} </div>
-                    <div className={styles.courseReadMore} style={{width: '230px'}}>
-                      <ReadMore onClick={() => openDialog(item)}></ReadMore>
-                    </div>
-                    {/*<button onClick={() => openDialog(item)}>Open Dialog</button>*/}
+      <div className={styles.coursesContainer}>
+        <ul className={styles.coursesList}>
+          {coursesItems.map((item, index) => {
+            return (
+              <li key={index} className={styles.coursesListItem}>
+                {/*<Link*/}
+                {/*  to={item.link}*/}
+                {/*  className={styles.coursesLink}*/}
+                {/*  onClick={() => showCourse(index)}*/}
+                {/*>*/}
+                {/*  {item.name}*/}
+                {/*</Link>*/}
+                {/*{item.link ? (*/}
+                {/*  <button className={styles.courseButton}>*/}
+                {/*    <a*/}
+                {/*      href={item.link}*/}
+                {/*      target="_blank"*/}
+                {/*      rel="noreferrer"*/}
+                {/*      className={styles.courseButtonLink}*/}
+                {/*    >*/}
+                {/*      Check it out*/}
+                {/*    </a>*/}
+                {/*  </button>*/}
+                {/*) : null}*/}
+                <div className={styles.courseName}> {item.name} </div>
+                <div className={styles.courseReadMore} style={{width: '230px'}}>
+                  <ReadMore onClick={() => openDialog(item)}></ReadMore>
+                </div>
+                {/*<button onClick={() => openDialog(item)}>Open Dialog</button>*/}
 
-                    {/**/}
-                  </li>
-              );
-            })}
-          </ul>
-        </div>
-        <Modal isOpen={isOpen} onClose={() => closeDialog()} children={selectedCourse}
-               className={isOpen ? styles.modalVisible : styles.modalHidden}></Modal>
-
-        {/*<dialog id="dialog">*/}
-        {/*  <button onClick={() => closeDialog()}>Close</button>*/}
-        {/*  {selectedCourse.name}*/}
-        {/*</dialog>*/}
+                {/**/}
+              </li>
+            );
+          })}
+        </ul>
       </div>
+      <Modal isOpen={isOpen} onClose={() => closeDialog()} children={selectedCourse}
+             className={isOpen ? styles.modalVisible : styles.modalHidden}></Modal>
+
+      {/*<dialog id="dialog">*/}
+      {/*  <button onClick={() => closeDialog()}>Close</button>*/}
+      {/*  {selectedCourse.name}*/}
+      {/*</dialog>*/}
+    </div>
   );
 };
 
