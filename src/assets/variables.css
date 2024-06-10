@@ -1,0 +1,81 @@
+
+@font-face {
+  font-family: "Blackbird";
+  src: url("./Projekt_Blackbird_v2.otf") format("opentype");
+}
+@font-face {
+  font-family: 'BigJohnRegular';
+  src: local('BigJohnRegular'), url('./BigJohnPRO-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "BigJohnBold";
+  src: local('BigJohnBold'),  url("./BigJohnPRO-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "BigJohnLight";
+  src: local('BigJohnLight'), url("./BigJohnPRO-Light.otf") format("opentype");
+}
+
+:root {
+  --white: #ffffff;
+  --white-smoke: #f5f5f5;
+  --platinum: #dddddd;
+  --silver: #c4c4c4;
+  --silver-dark: #acacac;
+  --battleship-gray: #939393;
+  --gray: #7b7b7b;
+  --dim-gray: #626262;
+  --davys-gray: #494949;
+  --jet: #313131;
+  --eerie-black: #181818;
+  --black: #000000;
+  --ultra-pink: #ff6fff;
+  --coral: #ff784f;
+
+
+  /*gold theme*/
+  --merlin: #464543;
+  --albescent-white: #d9d1c6;
+  --marigold: #ae914A;
+  --zircon: #dddfdf;
+
+  /*nature theme*/
+  --paynes-grey: #414143;
+  --siam: #6b6b56;
+  --blue-smoke: #7a807c;
+  --medium-wood: #a98f6a;
+  --very-light-grey: #cecece;
+  --mist-grey: #b8b6aa;
+
+  /*measurements*/
+  /*--border-radius: 0.3rem;*/
+  --border-radius: 30px;
+  --smaller-border-radius: 15px;
+
+  /*font*/
+  --font-light: "BigJohnLight", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-regular: "BigJohnRegular", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-bold: "BigJohnBold", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /*--header: "BigJohnBold";*/
+  /*--header: "BigJohnLight";*/
+  /*--header: "Blackbird";*/
+}
+
+[data-theme="light"] {
+  --background-primary: var(--white-smoke);
+  --background-secondary: var(--platinum);
+  --cursor-color: var(--battleship-gray);
+  --text-primary: var(--black);
+  --text-secondary: var(--eerie-black);
+  --accent: var(--coral);
+}
+
+[data-theme="dark"] {
+  --background-primary: var(--eerie-black);
+  --background-secondary: var(--jet);
+  --cursor-color: var(--davys-gray);
+  --text-primary: var(--white);
+  --text-secondary: var(--white-smoke);
+  --accent: var(--ultra-pink);
+}

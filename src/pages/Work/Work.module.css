@@ -1,0 +1,68 @@
+@import "../../assets/variables.css";
+
+.coursesContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80vh;
+  text-transform: lowercase;
+}
+
+.coursesList {
+  max-width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 2em;
+}
+.coursesListItem {
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 2vh;
+}
+.coursesLink {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.coursesLink:hover {
+  color: var(--accent);
+}
+
+.courseButton {
+  background-color: var(--accent);
+  border: 1px solid var(--text-secondary);
+  border-radius: 5px;
+  padding: 0.4em 0.8em;
+  margin: 0 0.5em;
+  cursor: pointer;
+}
+
+.courseButtonLink {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: bold;
+}
+
+.preview {
+  flex-grow: 1;
+  width: 70vw;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.previewIFrame {
+  width: 60vw;
+  height: 100%;
+  border: none;
+}
