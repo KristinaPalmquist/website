@@ -1,49 +1,49 @@
 import styles from "./Modal.module.css";
-import React, { useEffect, useRef, useState } from "react";
-import { Course } from "../../pages/Courses/Courses.tsx";
+import {useEffect, useRef, useState} from "react";
+import {Course} from "../../pages/Courses/Courses.tsx";
 
 
 interface ModalProps {
-    isOpen: boolean;
-    onClose: () => void;
-    children: Course;
-    className?: string;
+  isOpen: boolean;
+  onClose: () => void;
+  children: Course;
+  className?: string;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }: ModalProps) => {
-    const course: Course = children;
-    const [isModalOpen, setModalOpen] = useState(isOpen);
-    const modalRef = useRef<HTMLDialogElement | null>(null);
-    useEffect(() => {
-        setModalOpen(isOpen);
-        const modalElement = modalRef.current;
-        if(modalElement) {
-            if (isModalOpen) {
-                modalElement.showModal();
-            } else {
-                modalElement.close();
-            }
-        }
-    }, [isModalOpen]);
+const Modal: React.FC<ModalProps> = ({isOpen, onClose, children}: ModalProps) => {
+  const course: Course = children;
+  const [isModalOpen, setModalOpen] = useState(isOpen);
+  const modalRef = useRef<HTMLDialogElement | null>(null);
+  useEffect(() => {
+    setModalOpen(isOpen);
+    const modalElement = modalRef.current;
+    if (modalElement) {
+      if (isModalOpen) {
+        modalElement.showModal();
+      } else {
+        modalElement.close();
+      }
+    }
+  }, [isOpen, isModalOpen]);
 
-    const handleCloseModal = () => {
-        if(onClose) {
-            onClose();
-        }
-        setModalOpen(false);
+  const handleCloseModal = () => {
+    if (onClose) {
+      onClose();
     }
-    const handleKeyDown = (event: React.KeyboardEvent<HTMLDialogElement>) => {
-        if(event.key === "Escape") {
-            handleCloseModal();
-        }
+    setModalOpen(false);
+  }
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDialogElement>) => {
+    if (event.key === "Escape") {
+      handleCloseModal();
     }
-    if (!isModalOpen) return null;
-    return (
-        <dialog className={styles.modal} ref={modalRef} onKeyDown={handleKeyDown}>
-            <button className={styles.closeButton} onClick={handleCloseModal}>X</button>
-            <div className={styles.content}>{course.name}</div>
-        </dialog>
-    );
+  }
+  if (!isModalOpen) return null;
+  return (
+    <dialog className={styles.modal} ref={modalRef} onKeyDown={handleKeyDown}>
+      <button className={styles.closeButton} onClick={handleCloseModal}>X</button>
+      <div className={styles.content}>{course.name}</div>
+    </dialog>
+  );
 }
 
 export default Modal;

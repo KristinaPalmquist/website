@@ -1,14 +1,5 @@
 @import "../../assets/variables.css";
 
-/*.darkModeContainer {*/
-/*  !* display: flex;*/
-/*  flex-direction: row; *!*/
-/*  display: flex;*/
-/*  align-items: center;*/
-/*  justify-content: space-between;*/
-/*  position: relative;*/
-/*}*/
-
 .darkModeButton {
   display: flex;
   align-items: center;
