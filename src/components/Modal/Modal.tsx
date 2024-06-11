@@ -1,5 +1,5 @@
 import styles from "./Modal.module.css";
-import {KeyboardEvent, useEffect, useRef, useState} from "react";
+import {FC, KeyboardEvent, useEffect, useRef, useState} from "react";
 import {Course} from "../../pages/Courses/Courses.tsx";
 import closeIcon from '../../assets/images/closeIcon.svg'
 
@@ -10,7 +10,7 @@ interface ModalProps {
   className?: string;
 }
 
-const Modal: React.FC<ModalProps> = ({isOpen, onClose, children}: ModalProps) => {
+const Modal: FC<ModalProps> = ({isOpen, onClose, children}: ModalProps) => {
   const course: Course = children;
   const [isModalOpen, setModalOpen] = useState(isOpen);
   const modalRef = useRef<HTMLDialogElement | null>(null);
@@ -42,6 +42,7 @@ const Modal: React.FC<ModalProps> = ({isOpen, onClose, children}: ModalProps) =>
   return (
     <dialog className={styles.modal} ref={modalRef} onKeyDown={handleKeyDown}>
       <button className={styles.closeButton} onClick={handleCloseModal}>
+        {/*<img src={url('../../assets/images/testingDrip.png')} alt="close" className={styles.closeIcon}></img>*/}
         <img src={closeIcon} alt="close" className={styles.closeIcon}></img>
       </button>
       <div className={styles.content}>

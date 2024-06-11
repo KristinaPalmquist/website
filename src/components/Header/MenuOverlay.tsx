@@ -33,7 +33,8 @@ export const MenuOverlay = ({navbarOpen, setNavbarOpen}
 
 
   return (
-    <nav className={navbarOpen ? styles.navbarOpen : styles.navbar}>
+    <nav className={[styles.navbar, navbarOpen ? styles.navbarOpen : styles.navbarClosed].join(" ")}>
+      {/*<nav className={navbarOpen ? styles.navbarOpen : styles.navbar}>*/}
       <ul className={styles.menu}>
         {menuItems.map((item, index) => {
           return (
