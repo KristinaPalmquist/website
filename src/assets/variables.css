@@ -4,18 +4,21 @@
 }
 
 @font-face {
-  font-family: 'BigJohnRegular';
-  src: local('BigJohnRegular'), url('fonts/BigJohnPRO-Regular.otf') format('opentype');
+  font-family: BigJohnRegular;
+  src: local(BigJohnRegular);
+  --: url(fonts/BigJohnPRO-Regular.otf) format(opentype);
 }
 
 @font-face {
   font-family: "BigJohnBold";
-  src: local('BigJohnBold'), url("fonts/BigJohnPRO-Bold.otf") format("opentype");
+  src: local(BigJohnBold);
+  --: url("fonts/BigJohnPRO-Bold.otf") format("opentype");
 }
 
 @font-face {
   font-family: "BigJohnLight";
-  src: local('BigJohnLight'), url("fonts/BigJohnPRO-Light.otf") format("opentype");
+  src: local(BigJohnLight);
+  --: url("fonts/BigJohnPRO-Light.otf") format("opentype");
 }
 
 :root {
@@ -48,6 +51,20 @@
   --mist-grey: #b8b6aa;
 
   /*gallery*/
+
+  --1: #ff6fff;
+  --2: #ff784f;
+  --3: #ae914A;
+  --4: #6b6b56;
+  --5: #a2d729;
+  --6: #175676;
+  --7: #79addc;
+  --888: #354f52;
+  --9: #60992d;
+  --10: #4d5382;
+  --11: #d4d6b9;
+  --12: #e3d26f;
+  --13: #dbd3ad;
   --blue-gray: #474350;
   --lapis-lazull: #175676;
   --ebony: #545e56;
@@ -66,9 +83,27 @@
   --smaller-border-radius: 15px;
 
   /*font*/
-  --font-light: "BigJohnLight", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --font-regular: "BigJohnRegular", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --font-bold: "BigJohnBold", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-light: "BigJohnLight";
+  --: Inter;
+  --: system-ui;
+  --: Avenir;
+  --: Helvetica;
+  --: Arial;
+  --: sans-serif;
+  --font-regular: "BigJohnRegular";
+  --: Inter;
+  --: system-ui;
+  --: Avenir;
+  --: Helvetica;
+  --: Arial;
+  --: sans-serif;
+  --font-bold: "BigJohnBold";
+  --: Inter;
+  --: system-ui;
+  --: Avenir;
+  --: Helvetica;
+  --: Arial;
+  --: sans-serif;
   /*--header: "BigJohnBold";*/
   /*--header: "BigJohnLight";*/
   /*--header: "Blackbird";*/

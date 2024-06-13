@@ -1,15 +1,30 @@
-import {useEffect, useRef} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import styles from './HoverGlideGallery.module.css';
-import variables from '../../assets/variables.css'
 
 const HoverGlideGallery = () => {
   const galleryRef = useRef(null);
 
 
-  const backgroundColors = [variables(var(--ultra-pink)),]
+  const backgroundColors = [
+    '#ff6fff', '#ff784f', '#ae914A', '#6b6b56',
+    '#a2d729', '#175676', '#79addc',
+    '#354f52', '#60992d', '#4d5382',
+    '#d4d6b9', '#e3d26f', '#dbd3ad']
   const getRandomColor = () => {
-
+    return backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
   }
+
+  const generateRandomColors = (num) => {
+    return Array.from({length: num}, () => getRandomColor());
+  }
+
+  const randomColor = () => {
+    const [divColors, setDivColors] = useState([]);
+    useEffect(() => {
+      setDivColors((generateRandomColors(backgroundColors.length)))
+    })
+  }
+
 
   useEffect(() => {
     const gallery = galleryRef.current;
@@ -48,6 +63,13 @@ const HoverGlideGallery = () => {
 
   return (
     <div id="gallery" ref={galleryRef} className={styles.gallery}>
+      {/*{CoursesItems.map((item, index) => {*/}
+      {/*  return (  <div className={styles.tile}>*/}
+      {/*    <img*/}
+      {/*      src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHJhbmRvbSUyMG9iamVjdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=70"*/}
+      {/*      alt="Random"/>*/}
+      {/*  </div>)}*/}
+
       <div className={styles.tile}>
         <img
           src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHJhbmRvbSUyMG9iamVjdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=70"
@@ -94,6 +116,7 @@ const HoverGlideGallery = () => {
           alt="Random"/>
       </div>
     </div>
+
   );
 };
 
