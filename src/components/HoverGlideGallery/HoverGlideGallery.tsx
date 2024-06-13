@@ -1,11 +1,12 @@
 import {useEffect, useRef} from 'react';
 import styles from './HoverGlideGallery.module.css';
+import variables from '../../assets/variables.css'
 
 const HoverGlideGallery = () => {
   const galleryRef = useRef(null);
 
 
-  const backgroundColors = ['#ff6fff',]
+  const backgroundColors = [variables(var(--ultra-pink)),]
   const getRandomColor = () => {
 
   }
