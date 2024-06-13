@@ -1,30 +1,29 @@
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useRef} from 'react';
 import styles from './HoverGlideGallery.module.css';
 
 const HoverGlideGallery = () => {
   const galleryRef = useRef(null);
 
-
-  const backgroundColors = [
-    '#ff6fff', '#ff784f', '#ae914A', '#6b6b56',
-    '#a2d729', '#175676', '#79addc',
-    '#354f52', '#60992d', '#4d5382',
-    '#d4d6b9', '#e3d26f', '#dbd3ad']
-  const getRandomColor = () => {
-    return backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
-  }
-
-  const generateRandomColors = (num) => {
-    return Array.from({length: num}, () => getRandomColor());
-  }
-
-  const randomColor = () => {
-    const [divColors, setDivColors] = useState([]);
-    useEffect(() => {
-      setDivColors((generateRandomColors(backgroundColors.length)))
-    })
-  }
-
+  // const backgroundColors = [
+  //   '#ff6fff', '#ff784f', '#ae914A', '#6b6b56',
+  //   '#a2d729', '#175676', '#79addc',
+  //   '#354f52', '#60992d', '#4d5382',
+  //   '#d4d6b9', '#e3d26f', '#dbd3ad'
+  // ];
+  // const getRandomColor = () => {
+  //   return backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
+  // }
+  //
+  // const generateRandomColors = (num) => {
+  //   return Array.from({length: num}, () => getRandomColor());
+  // }
+  //
+  // const randomColor = () => {
+  //   const [divColors, setDivColors] = useState([]);
+  //   useEffect(() => {
+  //     setDivColors((generateRandomColors(backgroundColors.length)))
+  //   })
+  // }
 
   useEffect(() => {
     const gallery = galleryRef.current;
