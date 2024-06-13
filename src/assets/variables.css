@@ -59,7 +59,7 @@
   --5: #a2d729;
   --6: #175676;
   --7: #79addc;
-  --888: #354f52;
+  --8: #354f52;
   --9: #60992d;
   --10: #4d5382;
   --11: #d4d6b9;
@@ -83,27 +83,9 @@
   --smaller-border-radius: 15px;
 
   /*font*/
-  --font-light: "BigJohnLight";
-  --: Inter;
-  --: system-ui;
-  --: Avenir;
-  --: Helvetica;
-  --: Arial;
-  --: sans-serif;
-  --font-regular: "BigJohnRegular";
-  --: Inter;
-  --: system-ui;
-  --: Avenir;
-  --: Helvetica;
-  --: Arial;
-  --: sans-serif;
-  --font-bold: "BigJohnBold";
-  --: Inter;
-  --: system-ui;
-  --: Avenir;
-  --: Helvetica;
-  --: Arial;
-  --: sans-serif;
+  --font-light: "BigJohnLight", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-regular: "BigJohnRegular", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-bold: "BigJohnBold", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   /*--header: "BigJohnBold";*/
   /*--header: "BigJohnLight";*/
   /*--header: "Blackbird";*/
