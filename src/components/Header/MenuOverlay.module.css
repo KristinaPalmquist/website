@@ -1,19 +1,19 @@
 @import "../../assets/variables.css";
 
-
 .navbar {
   position: fixed;
   /*display: flex;*/
-  top: 100px;
+  top: 0;
+  /*top: 100px;*/
   left: 0;
+  z-index: 150;
   width: 100%;
   /*padding-left: 2.5rem; !* 40px if 1rem = 16px *!*/
   /*padding-right: 2.5rem; !* 40px if 1rem = 16px *!*/
-  z-index: 10;
-  height: 100vh; /* Full viewport height */
-  /*padding-top: 6rem; !* 96px if 1rem = 16px *!*/
+  height: 100vh;
+  padding-top: 6rem;
   /*background-color: var(--background-secondary);*/
-  /*background-color: var(--accent);*/
+  background-color: var(--accent);
   background-image: url('../../assets/images/testingDrip.png');
   background-size: cover;
   background-position-y: bottom;
@@ -21,8 +21,12 @@
   transform: translateY(-150%); /* Default state */
   /*opacity: 0; !* Default state *!*/
   /* Combined transition properties */
-
 }
+
+.navbar::backdrop {
+  background: hsl(0 0% 0% / 50%);
+}
+
 
 .navbarClosed {
   transition: transform 0.5s ease-in-out;
@@ -35,10 +39,10 @@
   height: 100%;
   width: 100%;
   transform: translateY(0);
-  /*opacity: 1;*/
+  opacity: 1;
   /*justify-content: center;*/
   /*align-items: center;*/
-  z-index: 500;
+  z-index: 100;
 }
 
 .navbarOpen::backdrop {
@@ -67,7 +71,6 @@
   font-style: italic;
 }
 
-
 .menuLink {
   text-decoration: none;
   height: 100%;
@@ -75,5 +78,6 @@
   padding-top: 0.5rem; /* 8px if 1rem = 16px */
   padding-bottom: 0.5rem; /* 8px if 1rem = 16px */
   font-size: 4rem;
-  color: var(--text-primary); /* white */
+  color: var(--background-primary);
+  /*color: var(--text-primary); */
 }

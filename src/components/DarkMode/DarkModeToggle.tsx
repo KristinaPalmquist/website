@@ -14,26 +14,10 @@ export const DarkModeToggle = ({theme, onThemeChange}) => {
     onThemeChange(newTheme);
   };
   return (
-    <button
-      onClick={handleClick}
-      className={styles.darkModeButton}
-    >
-      <div
-        className={
-          isDarkMode ? styles.darkModeInactive : styles.darkModeActive
-        }
-      >
-        light
-      </div>
+    <button onClick={handleClick} className={styles.darkModeButton}>
+      <div className={isDarkMode ? styles.darkModeInactive : styles.darkModeActive}> light</div>
       <div className={[styles.active, theme === "dark" ? styles.dark : styles.light].join(" ")}></div>
-
-      <div
-        className={
-          isDarkMode ? styles.lightModeActive : styles.lightModeInactive
-        }
-      >
-        dark
-      </div>
+      <div className={isDarkMode ? styles.lightModeActive : styles.lightModeInactive}> dark</div>
     </button>
   );
 };

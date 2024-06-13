@@ -16,16 +16,21 @@ export const MenuOverlay = ({navbarOpen, setNavbarOpen}
     },
     {
       id: 3,
+      name: "Gallery",
+      link: "/gallery",
+    },
+    {
+      id: 4,
       name: "Courses",
       link: "/courses",
     },
     {
-      id: 4,
+      id: 5,
       name: "About",
       link: "/about",
     },
     {
-      id: 5,
+      id: 6,
       name: "Contact",
       link: "/contact",
     },

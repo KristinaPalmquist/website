@@ -1,7 +1,7 @@
 import styles from "./Modal.module.css";
 import {FC, KeyboardEvent, useEffect, useRef, useState} from "react";
 import {Course} from "../../pages/Courses/Courses.tsx";
-import closeIcon from '../../assets/images/closeIcon.svg'
+import CloseIcon from "../CloseIcon/CloseIcon.tsx";
 
 interface ModalProps {
   isOpen: boolean;
@@ -26,7 +26,6 @@ const Modal: FC<ModalProps> = ({isOpen, onClose, children}: ModalProps) => {
     }
   }, [isOpen, isModalOpen]);
 
-
   const handleCloseModal = () => {
     if (onClose) {
       onClose();
@@ -42,8 +41,7 @@ const Modal: FC<ModalProps> = ({isOpen, onClose, children}: ModalProps) => {
   return (
     <dialog className={styles.modal} ref={modalRef} onKeyDown={handleKeyDown}>
       <button className={styles.closeButton} onClick={handleCloseModal}>
-        {/*<img src={url('../../assets/images/testingDrip.png')} alt="close" className={styles.closeIcon}></img>*/}
-        <img src={closeIcon} alt="close" className={styles.closeIcon}></img>
+        <CloseIcon></CloseIcon>
       </button>
       <div className={styles.content}>
         <h2>{course.name}</h2>

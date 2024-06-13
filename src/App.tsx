@@ -15,6 +15,7 @@ import {DarkModeToggle} from "./components/DarkMode/DarkModeToggle.tsx";
 import {useState} from "react";
 import {MenuOverlay} from "./components/Header/MenuOverlay.tsx";
 import {Header} from "./components/Header/Header.tsx";
+import Gallery from "./pages/Gallery/Gallery.tsx";
 
 function App() {
   const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -31,18 +32,19 @@ function App() {
   return (
     <div className="App" data-theme={theme}>
       <CircleCursor/>
-      <div className="darkModeContainer">
-        <DarkModeToggle theme={theme} onThemeChange={handleThemeChange}/></div>
       <div className="headerContainer">
         <Header navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen}/>
         <MenuOverlay navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen}/>
       </div>
+      <div className="darkModeContainer">
+        <DarkModeToggle theme={theme} onThemeChange={handleThemeChange}/></div>
       <div className="contentContainer">
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="/work" element={<Courses/>}/>
+            <Route path="/gallery" element={<Gallery/>}/>
             <Route path="/courses" element={<Courses/>}/>
             <Route path="/contact" element={<Contact/>}/>
             <Route path="*" element={<ErrorComponent/>}/>

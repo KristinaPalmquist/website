@@ -1,20 +1,21 @@
-
 @font-face {
   font-family: "Blackbird";
-  src: url("./Projekt_Blackbird_v2.otf") format("opentype");
+  src: url("fonts/Projekt_Blackbird_v2.otf") format("opentype");
 }
+
 @font-face {
   font-family: 'BigJohnRegular';
-  src: local('BigJohnRegular'), url('./BigJohnPRO-Regular.otf') format('opentype');
+  src: local('BigJohnRegular'), url('fonts/BigJohnPRO-Regular.otf') format('opentype');
 }
 
 @font-face {
   font-family: "BigJohnBold";
-  src: local('BigJohnBold'),  url("./BigJohnPRO-Bold.otf") format("opentype");
+  src: local('BigJohnBold'), url("fonts/BigJohnPRO-Bold.otf") format("opentype");
 }
+
 @font-face {
   font-family: "BigJohnLight";
-  src: local('BigJohnLight'), url("./BigJohnPRO-Light.otf") format("opentype");
+  src: local('BigJohnLight'), url("fonts/BigJohnPRO-Light.otf") format("opentype");
 }
 
 :root {
@@ -32,8 +33,6 @@
   --black: #000000;
   --ultra-pink: #ff6fff;
   --coral: #ff784f;
-
-
   /*gold theme*/
   --merlin: #464543;
   --albescent-white: #d9d1c6;
@@ -47,6 +46,19 @@
   --medium-wood: #a98f6a;
   --very-light-grey: #cecece;
   --mist-grey: #b8b6aa;
+
+  /*gallery*/
+  --blue-gray: #474350;
+  --lapis-lazull: #175676;
+  --ebony: #545e56;
+  --ruddy-blue: #79addc;
+  --space-cadet: #222e50;
+  --dark-slate-gray: #354f52;
+  --tiffany-blue: #7dcfb6;
+  --ultra-violet: #4d5382;
+  --van-dyke: #523a34;
+  --carmine: #a30015;
+  --dark-purple: #2f0a28;
 
   /*measurements*/
   /*--border-radius: 0.3rem;*/
@@ -64,18 +76,22 @@
 
 [data-theme="light"] {
   --background-primary: var(--white-smoke);
-  --background-secondary: var(--platinum);
-  --cursor-color: var(--battleship-gray);
+  --background-secondary: var(--albescent-white);
+  --cursor-color: var(--zircon);
   --text-primary: var(--black);
   --text-secondary: var(--eerie-black);
+  --text-third: var(--merlin);
   --accent: var(--coral);
+  --accent-second: var(--marigold);
 }
 
 [data-theme="dark"] {
-  --background-primary: var(--eerie-black);
-  --background-secondary: var(--jet);
-  --cursor-color: var(--davys-gray);
-  --text-primary: var(--white);
-  --text-secondary: var(--white-smoke);
+  --background-primary: var(--jet);
+  --background-secondary: var(--paynes-grey);
+  --cursor-color: var(--medium-wood);
+  --text-primary: var(--very-light-grey);
+  --text-secondary: var(--mist-grey);
+  --text-third: var(--blue-smoke);
   --accent: var(--ultra-pink);
+  --accent-second: var(--siam);
 }

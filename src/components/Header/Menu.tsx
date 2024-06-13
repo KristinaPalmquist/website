@@ -19,6 +19,10 @@
 //       id: 3,
 //       name: "Courses",
 //       link: "/courses",
+//     },{
+//       id: 3,
+//       name: "Courses",
+//       link: "/courses",
 //     },
 //     {
 //       id: 4,
