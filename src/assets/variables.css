@@ -5,20 +5,17 @@
 
 @font-face {
   font-family: BigJohnRegular;
-  src: local(BigJohnRegular);
-  --: url(fonts/BigJohnPRO-Regular.otf) format(opentype);
+  src: local(BigJohnRegular), url("fonts/BigJohnPRO-Regular.otf") format("opentype");
 }
 
 @font-face {
   font-family: "BigJohnBold";
-  src: local(BigJohnBold);
-  --: url("fonts/BigJohnPRO-Bold.otf") format("opentype");
+  src: local(BigJohnBold), url("fonts/BigJohnPRO-Bold.otf") format("opentype");
 }
 
 @font-face {
   font-family: "BigJohnLight";
-  src: local(BigJohnLight);
-  --: url("fonts/BigJohnPRO-Light.otf") format("opentype");
+  src: local(BigJohnLight), url("fonts/BigJohnPRO-Light.otf") format("opentype");
 }
 
 :root {
