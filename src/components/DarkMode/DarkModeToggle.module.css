@@ -1,6 +1,13 @@
 @import "../../assets/variables.css";
 
+.darkModeDiv {
+  position: absolute;
+}
+
 .darkModeButton {
+  position: relative;
+  top: 30px;
+  right: 4%;
   display: flex;
   align-items: center;
   flex-grow: 0;

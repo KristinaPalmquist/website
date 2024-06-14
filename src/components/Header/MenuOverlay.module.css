@@ -13,7 +13,7 @@
   height: 100vh;
   padding-top: 6rem;
   /*background-color: var(--background-secondary);*/
-  background-color: var(--accent);
+  background-color: var(--accent-second);
   background-image: url('../../assets/images/testingDrip.png');
   background-size: cover;
   background-position-y: bottom;
@@ -78,6 +78,6 @@
   padding-top: 0.5rem; /* 8px if 1rem = 16px */
   padding-bottom: 0.5rem; /* 8px if 1rem = 16px */
   font-size: 4rem;
-  color: var(--background-primary);
-  /*color: var(--text-primary); */
+  /*color: var(--background-primary);*/
+  color: var(--text-secondary);
 }

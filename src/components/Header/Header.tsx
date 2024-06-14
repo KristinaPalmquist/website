@@ -12,11 +12,14 @@ export const Header = ({navbarOpen, setNavbarOpen}) => {
       <h1 className={styles.headerText}>Kristina Palmquist</h1>
       <button className={styles.navbarBtn} onClick={navbarClick}>
         <div className={styles.innerContainer}>
-          <span className={[styles.line, styles.line1, navbarOpen ? styles.line1Open : styles.line1Closed].join(" ")}>
+          <span className={[styles.line, styles.line1, navbarOpen ? styles.line1Open : ''].join(" ")}>
+          {/*<span className={[styles.line, styles.line1, navbarOpen ? styles.line1Open : styles.line1Closed].join(" ")}>*/}
           </span>
-          <span className={[styles.line, styles.line2, navbarOpen ? styles.line2Open : styles.line2Closed].join(" ")}>
+          <span className={[styles.line, styles.line2, navbarOpen ? styles.line2Open : ''].join(" ")}>
+          {/*<span className={[styles.line, styles.line2, navbarOpen ? styles.line2Open : styles.line2Closed].join(" ")}>*/}
           </span>
-          <span className={[styles.line, styles.line3, navbarOpen ? styles.line3Open : styles.line3Closed].join(" ")}>
+          <span className={[styles.line, styles.line3, navbarOpen ? styles.line3Open : ''].join(" ")}>
+          {/*<span className={[styles.line, styles.line3, navbarOpen ? styles.line3Open : styles.line3Closed].join(" ")}>*/}
           </span>
         </div>
       </button>
