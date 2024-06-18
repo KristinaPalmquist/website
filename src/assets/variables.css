@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: "BigJohnBold";
+  font-family: BigJohnBold;
   src: local(BigJohnBold), url("fonts/BigJohnPRO-Bold.otf") format("opentype");
 }
 
@@ -33,6 +33,7 @@
   --black: #000000;
   --ultra-pink: #ff6fff;
   --coral: #ff784f;
+
   /*gold theme*/
   --merlin: #464543;
   --albescent-white: #d9d1c6;
