@@ -1,12 +1,5 @@
 @import "../../assets/variables.css";
 
-/*body {*/
-/*  background-color: rgb(10, 10, 10);*/
-/*  height: 100vh;*/
-/*  margin: 0;*/
-/*  overflow: hidden;*/
-/*}*/
-
 .gallery {
   height: 200vmax;
   width: 200vmax;

@@ -7,10 +7,12 @@ export const Header = ({navbarOpen, setNavbarOpen}) => {
     })
   }
 
+
   return (
     <header className={styles.header}>
-      <h1 className={[styles.headerText, navbarOpen ? styles.headerTextOpen : ''].join(" ")}>Kristina Palmquist</h1>
-      {/*<h1 className={styles.headerText}>Kristina Palmquist</h1>*/}
+      <h1 className={[styles.headerText, navbarOpen ? styles.headerTextOpen : ''].join(" ")}>
+        <a href={'/'}>Kristina Palmquist</a>
+      </h1>
       <button className={styles.navbarBtn} onClick={navbarClick}>
         <div className={styles.innerContainer}>
           <span className={[styles.line, styles.line1, navbarOpen ? styles.line1Open : ''].join(" ")}>

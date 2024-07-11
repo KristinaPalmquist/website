@@ -20,6 +20,12 @@
   transition-property: font-weight, color;
 }
 
+.headerText > a {
+  text-decoration: none;
+
+
+}
+
 .headerTextOpen {
   transition-delay: 0.5s;
   transition-property: font-weight, color;
